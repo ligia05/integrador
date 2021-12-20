@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<%- include('parts/head',{title:'TLINK'}); %>
+
+    <link rel='stylesheet' href='/css/home.css' />
+    <%- include('parts/head',{title:'TLINK'}); %>
+    <%- include('parts/headerHome')%>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+    
+
+    <%- include('parts/footer')%>
