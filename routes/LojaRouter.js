@@ -12,9 +12,9 @@ const storage = multer.diskStorage(
       }
 );
 const upload = multer({storage})
-const LojistaLogado = require('../middlewares/LojistaLogado')          
+const LojistaLogado = require('../middlewares/LojistaLogado')
 const router = express.Router()
-router.get("/lojinha", LojaController.avalia)
+router.get("/lojinha", LojaController.lojinha);
 router.get ("/lojinha/:id", LojaController.getProduto)
 router.get("/lojinha/maisvendidos", LojaController.busca)
 router.get("/lojinha/create/", LojaController.lojinhacreate);

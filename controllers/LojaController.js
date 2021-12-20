@@ -4,10 +4,10 @@ const maisvendidos = require('../database/maisVendidos.json')
 const fs = require('fs');
 const { validationResult } = require('express-validator');
 
-const controller = {
+const Lojacontroller = {
 
-    avalia: (req, res)=>{
-    return res.render("lojinha", {avaliacao,busca:" "})
+   lojinha: (req, res)=>{
+     res.render("lojinha")
 },
 getProduto: (req, res) => {
 
@@ -67,6 +67,6 @@ store: (req,res) => {
 
 }
 
-module.exports = controller;
+module.exports = Lojacontroller;
 
 
