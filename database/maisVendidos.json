@@ -1,0 +1,12 @@
+[
+{"id":11,"nome":"Queijo Meia Cura","ingredientes":["leite","fermento lático","sal"],"preco":28.5,"img":"","destaque":true},
+    
+    
+    {"id":4,"nome":"Bolinho de Polenta","ingredientes":["mussarela","polenta","linguiça"],"preco":13.5,"img":"","destaque":false},
+     
+        
+  {"id":9,"nome":"Geleia de Pimenta","ingredientes":["pimenta dedo-de-moça","pimenta de cheiro","açucar"],"preco":15.5,"img":"","destaque":true},
+            
+            
+            {"id":6,"nome":"Conserva de Berinjela","ingredientes":["cebola","pimentão","berinjela","azeite"],"preco":20.5,"img":"","destaque":true}
+            ]

@@ -1,7 +1,7 @@
 const geral = require('../database/BuscaGeral.json')
-const BaseController = {
+const controller = {
     home: (req, res) => {
-      res.render('home', {gera, busca:"" });
+      res.render('home', {geral, busca:" " });
     
     },
     busca: (req,res) => {

@@ -1,5 +1,5 @@
 module.exports = {
-    showLogin: (req,res) => {
+    showLojaLogin: (req,res) => {
         return res.render("login");
     },
     login: (req,res) => {
