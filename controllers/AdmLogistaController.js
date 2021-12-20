@@ -1,0 +1,25 @@
+module.exports = {
+    showLogin: (req,res) => {
+        return res.render("login");
+    },
+    login: (req,res) => {
+
+        // Capturar o email e a senha inseridos pelo usuário
+        const {email, senha} = req.body;
+
+        // Carregar o array de usuários (database/Usuarios.json)
+        const lojistas = require('../database/LojistaAdm.json');
+
+        // Buscar o usuário no array pelo email digitado
+        const lojas = lojistas.find( u => u.email == email && u.senha == senha )
+
+        // Caso usuário não exista, retornar erro (fim)
+        if(lojas === undefined){
+            return res.send("Senha ou email inválidos");
+        }
+
+        // Se chegou até aqui, manda uma mensagem de sucesso.
+        return res.send("ok! Tudo certo...")
+
+    }
+}

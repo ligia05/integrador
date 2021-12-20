@@ -1,0 +1,65 @@
+[
+
+{
+"lojaId": 1,
+"numeroAvaliacoes": 6,
+"bom":4,
+"medio":2,
+"ruim":0,
+
+"avaliacoes": " "
+
+},
+{
+    "lojaId": 2,
+    "numeroAvaliacoes": 3,
+    "bom":3,
+    "medio":0,
+    "ruim":0,
+   "avaliacoes": " "
+},
+    {
+        "lojaId": 3,
+        "numeroAvaliacoes": 10,
+        "bom":9,
+        "medio":1,
+        "ruim":0,
+        "avaliacoes": " "
+        },
+        {
+        "lojaId": 4,
+        "numeroAvaliacoes": 6,
+        "bom":3,
+        "medio":2,
+        "ruim":1,
+        "avaliacoes":" "
+        },
+        
+        {
+        "lojaId": 5,
+        "numeroAvaliacoes": 4,
+        "bom":4,
+        "medio":0,
+        "ruim":0,
+       "avaliacoes": " "
+        },
+        {
+        "lojaId": 6,
+        "numeroAvaliacoes": 2,
+        "bom":1,
+        "medio":1,
+        "ruim":0,
+        "avaliacoes": " "
+        
+        },
+        {
+        "lojaId": 7,
+        "numeroAvaliacoes": 12,
+        "bom":12,
+        "medio":0,
+        "ruim":0,
+        "avaliacoes":" "
+        }
+    ]
+
+    
