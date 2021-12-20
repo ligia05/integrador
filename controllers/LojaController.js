@@ -59,7 +59,7 @@ store: (req,res) => {
         JSON.stringify(produtos, null, 4),
         {flag:'w'}
     );
-    res.redirect('/lojinha');
+    res.redirect('/lojinha/create');
 
 }
 

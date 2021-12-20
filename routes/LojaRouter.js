@@ -17,6 +17,6 @@ const router = express.Router()
 router.get("/lojinha", LojaController.avalia)
 router.get ("/lojinha/:id", LojaController.getProduto)
 router.get("/lojinha/maisvendidos", LojaController.busca)
-router.get("/lojinha/create", LojistaLogado, LojaController.lojinhacreate);
-router.post("lojinha/create", LojistaLogado, upload.single('images'), ValidadorDeFormProduto, LojaController.store);
+router.get("/lojinha/create/", LojaController.lojinhacreate);
+router.post("/lojinha/create", LojistaLogado, upload.single('images'), ValidadorDeFormProduto, LojaController.store);
 module.exports=router;
