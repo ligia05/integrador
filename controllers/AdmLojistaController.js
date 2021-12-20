@@ -1,8 +1,9 @@
+const req = require('express/lib/request');
 module.exports = {
     showLojaLogin: (req,res) => {
-        return res.render("login");
+        return res.render("lojalogin");
     },
-    login: (req,res) => {
+    lojalogin: (req,res) => {
 
         // Capturar o email e a senha inseridos pelo usuário
         const {email, senha} = req.body;
@@ -19,7 +20,8 @@ module.exports = {
         }
 
         // Se chegou até aqui, manda uma mensagem de sucesso.
-        return res.send("ok! Tudo certo...")
+        req.session.lojas = lojas;
+        return res.redirect("/lojinha/create")
 
     }
 }

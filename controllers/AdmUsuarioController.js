@@ -1,3 +1,5 @@
+
+const req = require('express/lib/request');
 module.exports = {
     showLogin: (req,res) => {
         return res.render("login");
@@ -19,7 +21,8 @@ module.exports = {
         }
 
         // Se chegou até aqui, manda uma mensagem de sucesso.
-        return res.send("ok! Tudo certo...")
+        req.session.usuario = usuario;
+        return res.redirect('/')
 
     }
 }

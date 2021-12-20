@@ -1,7 +1,7 @@
 module.exports = (req, res, next) => {
     
-    if(req.session.lojistas == undefined){
-        return res.redirect("../login");
+    if(req.session.lojas == undefined){
+        return res.redirect("../lojista/login");
     }
 
     next();

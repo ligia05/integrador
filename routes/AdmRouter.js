@@ -16,9 +16,10 @@ const storage = multer.diskStorage(
 const upload = multer({storage})
 const HomeController = require('../controllers/HomeController');
 const UsuarioLogado = require('../middlewares/UsuarioLogado');
+const LojistaLogado = require('../middlewares/LojistaLogado');
 const router = express.Router();
 
 router.get('/login', UsuarioLogado, AdmUsuarioController.showLogin);
 
-router.get('/login', LojistaLogado, AdmLojistaController.showLojaLogin);
+router.get('/lojista/login', LojistaLogado, AdmLojistaController.showLojaLogin);
 module.exports = router;

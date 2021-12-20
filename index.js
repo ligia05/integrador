@@ -26,5 +26,6 @@ app.use(LogMiddleware);
 
 app.use('/', HomeRouter);
 app.use('/lojinha', LojaRouter);
+app.use ('/', AdmRouter);
 
 app.listen(3000, ()=>{console.log("servir rodando...")})

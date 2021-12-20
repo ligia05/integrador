@@ -4,7 +4,7 @@ const maisvendidos = require('../database/maisVendidos.json')
 const fs = require('fs');
 const { validationResult } = require('express-validator');
 
-const controllerLoja = {
+const controller = {
 
     avalia: (req, res)=>{
     return res.render("lojinha", {avaliacao,busca:" "})
@@ -48,7 +48,7 @@ store: (req,res) => {
     const nome = req.body.nome;
     const ingredientes = req.body.ingredientes.split(',').map(a => a.trim());
     const preco = Number(req.body.preco);
-    const produtofinal= {nome, ingredientes, preco, img:'/imgage/' + req.file.filename}
+    const produtofinal= {nome, ingredientes, preco, img:'/img/' + req.file.filename}
     
     produtofinal.id = produtos[produtos.length - 1].id + 1;
  
@@ -67,6 +67,6 @@ store: (req,res) => {
 
 }
 
-module.exports = controllerLoja;
+module.exports = controller;
 
 

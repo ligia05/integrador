@@ -1,5 +1,5 @@
 const geral = require('../database/BuscaGeral.json')
-const controller = {
+const homecontroller = {
     home: (req, res) => {
       res.render('home', {geral, busca:" " });
     
@@ -13,5 +13,5 @@ const controller = {
     res.render('home', {geral:buscaFiltrada, busca:buscaHome});
   }
 }
-  module.exports = controller;
+  module.exports = homecontroller;
  

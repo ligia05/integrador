@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLINK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/criar.css">
+</head>
+<body>
+    
+  
+        
+   
+    
+    
+        <link rel="stylesheet" href="/css/criar2.css">
+        
+        <nav id="nav-adm">
+            <div class="log"><img class="logo" src="header/logo.png" alt=""></div>
+            <div class="texto">
+                
+                Sua Lojinha
+                <span>
+                    Área Administrativa
+                </span>
+            </div>
+            <ul>
+            <li><a href="/pedidos">Pedidos</a></li>
+            <li><a href="/maispedidos">Mais Pedidos</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li class="selected"><a href="/">Minha Lojinha</a></li>
+            <li><a href="/users">Usuários</a></li>
+            <li><a href="/adm/logout">Sair</a></li>
+        </ul>
+        </div>
+        
+    </nav>
+    <link rel="stylesheet" href="/css/criar.css">
+    <div class="cad"> CADASTRAR NOVO PRODUTO </div>
+    <div class="caixa">
+        
+    
+    <form id="form-produto" method="POST" action="/lojinha/criar" enctype="multipart/form-data">
+        <label>
+            Nome:
+            <input type="text" name="nome" id="nome" placeholder="Digite o nome do Produto">
+        </label>
+        <label>
+            Ingredientes:
+            <input type="text" name="ingredientes" id="ingredientes" placeholder="Ingredientes principais(separados por vírgula)">
+        </label>
+        <label>
+            Preço:
+            <input type="number" name="preco" id="preco" step="0.01" placeholder="Preço">
+        </label>
+        <label>
+            Foto:
+            <img src="">
+            <div>Clique para selecione nova imagem</div>
+            <input type="file" name="img" id="img">
+        </label>
+        <button type="submit">Salvar</button>
+    </form>
+    </div>
+    
+
+
+</body>
+</html>
