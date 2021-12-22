@@ -1,6 +1,6 @@
 const express = require('express');
+
 const LojaController = require('../controllers/LojaController');
-const ValidadorDeFormProduto = require('../middlewares/ValidadorDeFormProduto');
 const multer = require('multer');
 const storage = multer.diskStorage(
     {
@@ -12,11 +12,15 @@ const storage = multer.diskStorage(
       }
 );
 const upload = multer({storage})
-const LojistaLogado = require('../middlewares/LojistaLogado')
+
+
+
 const router = express.Router()
-router.get("/lojinha", LojaController.lojinha);
-router.get ("/lojinha/:id", LojaController.getProduto)
-router.get("/lojinha/maisvendidos", LojaController.busca)
-router.get("/lojinha/create/", LojaController.lojinhacreate);
-router.post("/lojinha/create", LojistaLogado, upload.single('images'), ValidadorDeFormProduto, LojaController.store);
-module.exports=router;
+router.get('/lojinha', LojaController.lojinha);
+router.get ('/lojinha/:id', LojaController.getProduto)
+router.get('/lojinha/maisvendidos', LojaController.busca)
+
+router.get('/lojinha/create', LojaController.lojinhacreate);
+router.post('/lojinha/create', upload.single('images'), LojaController.store);
+
+module.exports= router;

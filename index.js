@@ -7,7 +7,7 @@ const HomeRouter = require('./routes/HomeRouter');
 const LojaRouter = require('./routes/LojaRouter');
 const AdmRouter = require('./routes/AdmRouter');
 
-const LogMiddleware = require('./middlewares/LogMiddleware');
+
 
 const app = express();
 
@@ -22,10 +22,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({secret:"SEGREDO"}));
 app.use(express.static(__dirname, + 'public'));
 
-app.use(LogMiddleware);
 
 app.use('/', HomeRouter);
 app.use('/lojinha', LojaRouter);
-app.use ('/', AdmRouter);
+app.use ('/lojinha/login', AdmRouter);
+app.use ('/usuario/login', AdmRouter);
 
 app.listen(3000, ()=>{console.log("servir rodando...")})

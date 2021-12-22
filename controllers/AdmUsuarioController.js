@@ -1,5 +1,5 @@
 
-const req = require('express/lib/request');
+const req = require('../database/UsuariosAdm.json');
 module.exports = {
     showLogin: (req,res) => {
         return res.render("login");

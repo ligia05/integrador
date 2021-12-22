@@ -26,8 +26,7 @@ getProduto: (req, res) => {
         res.render('produtofinal',{produtofinal, idNext, idPrev});
     },
 busca: (req,res) => {
-    
-    const buscaLojinha = req.query.q.trim();
+        const buscaLojinha = req.query.q.trim();
     const lojinhaFiltrada = maisvendidos.filter(
         p => p.nome.toUpperCase().includes(string.toUpperCase()) 
     );
@@ -39,19 +38,17 @@ busca: (req,res) => {
 store: (req,res) => {
 
     const erros = validationResult(req);
-    
     if(!erros.isEmpty()){
-      
         res.render('crud-lojinha/create', {erros: erros.mapped()})
     }
 
     const nome = req.body.nome;
     const ingredientes = req.body.ingredientes.split(',').map(a => a.trim());
     const preco = Number(req.body.preco);
-    const produtofinal= {nome, ingredientes, preco, img:'/img/' + req.file.filename}
-    
+    const produtofinal= {nome, ingredientes, preco, img:'/images/' + req.file.filename}
+
     produtofinal.id = produtos[produtos.length - 1].id + 1;
- 
+
     produtos.push(produtofinal);
 
     fs.writeFileSync(
